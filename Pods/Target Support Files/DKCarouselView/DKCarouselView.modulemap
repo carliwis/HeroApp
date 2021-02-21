@@ -1,0 +1,6 @@
+framework module DKCarouselView {
+  umbrella header "DKCarouselView-umbrella.h"
+
+  export *
+  module * { export * }
+}

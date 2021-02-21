@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroListHeaderView" id="U6b-Vx-4bR" customClass="HeroListHeaderView" customModule="HeroApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtA-0f-Qo3">
+                    <rect key="frame" x="18" y="17" width="59.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="59.5" id="8RY-LZ-kFD"/>
+                        <constraint firstAttribute="height" constant="21" id="jfm-48-Viq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi8-lM-Aau">
+                    <rect key="frame" x="288" y="15.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="1Yl-ze-B10"/>
+                        <constraint firstAttribute="height" constant="24" id="nyz-jI-k7f"/>
+                    </constraints>
+                    <state key="normal" image="grid_icon"/>
+                    <connections>
+                        <action selector="handleGridLayout:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="N4K-sR-BIW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-Li-iSW">
+                    <rect key="frame" x="316" y="15.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="3Ut-BD-ZLx"/>
+                        <constraint firstAttribute="height" constant="24" id="6il-eg-cAr"/>
+                    </constraints>
+                    <state key="normal" image="list_icon"/>
+                    <connections>
+                        <action selector="handleListLayout:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="hUU-EL-PeS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <color key="backgroundColor" red="0.4549019608" green="0.81176470590000005" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vEx-Li-iSW" firstAttribute="leading" secondItem="Oi8-lM-Aau" secondAttribute="trailing" constant="4" id="Fz3-tA-eJ4"/>
+                <constraint firstItem="xtA-0f-Qo3" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="18" id="JuG-SV-laE"/>
+                <constraint firstItem="vEx-Li-iSW" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Wma-ru-gF5"/>
+                <constraint firstAttribute="trailing" secondItem="vEx-Li-iSW" secondAttribute="trailing" constant="18" id="XAR-Z2-rvA"/>
+                <constraint firstItem="Oi8-lM-Aau" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="bkI-DC-iG9"/>
+                <constraint firstItem="xtA-0f-Qo3" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="jg1-QU-uCF"/>
+            </constraints>
+            <connections>
+                <outlet property="lblTitle" destination="xtA-0f-Qo3" id="peq-dv-5w0"/>
+            </connections>
+            <point key="canvasLocation" x="168.11594202898553" y="83.370535714285708"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="grid_icon" width="12" height="12"/>
+        <image name="list_icon" width="12" height="12"/>
+    </resources>
+</document>
